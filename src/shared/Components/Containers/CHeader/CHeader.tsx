@@ -1,8 +1,9 @@
-const CHeader = () => {
+import Navbar, { themeChangeProps } from "../../Navbar/Navbar";
+
+
+const CHeader = ({themeChanger}: themeChangeProps) => {
   return (
-    <div>
-      <h1>header</h1>
-    </div>
+    <Navbar themeChanger={themeChanger}/>
   )
 };
 
