@@ -1,9 +1,14 @@
+import CHeader from "./shared/Components/Containers/CHeader/CHeader";
+import GlobalStyles from "./shared/Styles";
 
 
 function App() {
   return (
-    <h1>aqui</h1>
+    <>
+      <GlobalStyles/>
+      <CHeader />
+    </>
   )
-}
+};
 
-export default App
+export default App;
