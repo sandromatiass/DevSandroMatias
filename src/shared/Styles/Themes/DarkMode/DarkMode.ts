@@ -6,7 +6,8 @@ export const DarkMode: ThemeProps = {
     primaryColor: "#0D0D0D",
     secundaryColor: "#05DBF2",
     background: "#262626",
-    text: "#FFFFFF"
+    text: "#FFFFFF",
+    buttonThemeColor:"#262626",
   }
 };
 

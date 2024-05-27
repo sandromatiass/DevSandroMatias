@@ -6,6 +6,7 @@ export const LightMode: ThemeProps = {
     primaryColor: "#0D0D0D",
     secundaryColor: "#05DBF2",
     background: "#EFEFEF",
-    text: "#0D0D0D"
+    text: "#0D0D0D",
+    buttonThemeColor:"#05DBF2",
   }
 };

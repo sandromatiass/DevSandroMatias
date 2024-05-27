@@ -20,6 +20,6 @@ export const SThemeButton = styled.div`
     text-align: center;
     padding: 0.6rem;
     cursor: pointer;
-    background-color: #05DBF2;
+    background-color: ${props => props.theme.colors.buttonThemeColor};
   } 
 `
