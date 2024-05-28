@@ -16,7 +16,6 @@ export const useThemeMode = () => {
   }, []);
 
   return { theme, themeChanger};
-
 };
 
 export default useThemeMode;
