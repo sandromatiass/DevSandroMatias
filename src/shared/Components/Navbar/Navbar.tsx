@@ -1,10 +1,11 @@
-/*import Switch from "react-switch";*/
-
 import { useTheme } from "styled-components";
+
 import { SNavbar, SThemeButton } from "./Navbar.styles";
 
 import { BsSun } from 'react-icons/bs';
 import { BsMoonStars } from 'react-icons/bs';
+
+import ButtonTranslate from "../ButtonTranslate/ButtonTranslate";
 
 export interface themeChangeProps {
   themeChanger: () => void;
@@ -16,6 +17,7 @@ const Navbar = ({themeChanger}: themeChangeProps) => {
   return (
     <SNavbar>
       <h1>navbar</h1>
+      <ButtonTranslate/>
       <SThemeButton>
         <label htmlFor="checkbox" className="switch">
           <input
