@@ -1,19 +1,27 @@
-import { ReactNode } from "react";
-import { ThemeProvider } from "styled-components";
-import { useThemeMode } from "../../Hooks/useThemeMode";
+import { ReactNode, createContext, useContext } from "react";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
+import useThemeMode from "../../Hooks/useThemeMode";
 import { DarkMode } from "../../../Styles/Themes/DarkMode/DarkMode";
 import { LightMode } from "../../../Styles/Themes/LightMode/LightMode";
 
 interface ThemeContextProps {
   children: ReactNode;
-};
+}
 
-const ThemeContext = ({ children }: ThemeContextProps) => {
-  const { theme } = useThemeMode();
+const ThemeContext = createContext<any>(null);
+
+export const ThemeProvider = ({ children }: ThemeContextProps) => {
+  const { theme, themeChanger } = useThemeMode();
 
   const themeMode = theme === "DarkMode" ? DarkMode : LightMode;
 
-  return <ThemeProvider theme={themeMode}>{children}</ThemeProvider>;
+  return (
+    <ThemeContext.Provider value={{ theme, themeChanger }}>
+      <StyledThemeProvider theme={themeMode}>{children}</StyledThemeProvider>
+    </ThemeContext.Provider>
+  );
 };
 
-export default ThemeContext;
+export const useTheme = () => useContext(ThemeContext);
+
+export default ThemeProvider;

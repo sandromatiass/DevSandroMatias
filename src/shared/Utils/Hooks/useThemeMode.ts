@@ -5,17 +5,21 @@ export const useThemeMode = () => {
 
   const setMode = (mode: string) => {
     window.localStorage.setItem("theme", mode);
-    setTheme(mode)
+    setTheme(mode);
   };
 
-  const themeChanger = () => (theme === "DarkMode" ? setMode("LightMode") : setMode("DarkMode"));
+  const themeChanger = () => {
+    setMode(theme === "DarkMode" ? "LightMode" : "DarkMode");
+  };
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme");
-    localTheme && setTheme(localTheme);
+    if (localTheme) {
+      setTheme(localTheme);
+    }
   }, []);
 
-  return { theme, themeChanger};
+  return { theme, themeChanger };
 };
 
 export default useThemeMode;
