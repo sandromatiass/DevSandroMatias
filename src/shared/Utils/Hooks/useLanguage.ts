@@ -17,7 +17,6 @@ const useLanguage = () => {
       i18n.changeLanguage(localLanguage).catch((err) => {
         console.log(err);
       });
-      console.log("Language retrieved from localStorage:", localLanguage);
     }
   }, [selectedLanguage]);
 
