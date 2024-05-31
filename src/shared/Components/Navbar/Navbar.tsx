@@ -18,6 +18,7 @@ const Navbar = ({themeChanger}: themeChangeProps) => {
     <SNavbar>
       <h1>navbar</h1>
       <ButtonTranslate/>
+      
       <SThemeButton>
         <label htmlFor="checkbox" className="switch">
           <input
@@ -40,6 +41,7 @@ const Navbar = ({themeChanger}: themeChangeProps) => {
             )}
           </div>
         </label>
+       
       </SThemeButton>
     </SNavbar>
   )

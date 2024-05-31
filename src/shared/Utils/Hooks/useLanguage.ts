@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import LanguageContext from "../Context/LanguageContext";
-import i18n from "../Languages/i18n";
+import i18n from "../languages/i18n";
 
 const useLanguage = () => {
   const context = useContext(LanguageContext);
