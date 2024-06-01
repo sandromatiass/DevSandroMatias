@@ -12,17 +12,19 @@ import useThemeMode from "./shared/Utils/Hooks/useThemeMode";
 import CHeader from "./shared/Components/Containers/CHeader/CHeader";
 
 
+
+
 function RoutesApp() {
   const {themeChanger} = useThemeMode();
 
 
   return (
     <BrowserRouter>
-      <CHeader themeChanger={themeChanger}/>
-      <Routes>
-        <Route path="/" element={ <HomePage/> }/>
-        <Route path="/Articles" element={ <ArticlesPage/> } />
-      </Routes>
+        <CHeader themeChanger={themeChanger}/>
+        <Routes>
+          <Route path="/" element={ <HomePage/> }/>
+          <Route path="/Articles" element={ <ArticlesPage/> } />
+        </Routes>
     </BrowserRouter>
   )
 };

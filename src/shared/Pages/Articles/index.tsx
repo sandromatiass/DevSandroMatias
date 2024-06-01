@@ -5,7 +5,8 @@ const ArticlesPage = () =>{
 
   return (
     <div>
-      <p>{t("Articles")}</p>
+      <p>{t("Artigos")}</p>
+      <p>{t("aqui eu consigo escrever artigos diversas vezes artigos ficam em inlgês")}</p>
     </div>
   )
 }

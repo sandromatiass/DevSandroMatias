@@ -14,13 +14,13 @@ const Navbar = () => {
 
   return (
     <SNavbar>
-      <h1>navbar</h1>
+      <h1>{t("navbar")}</h1>
       <ButtonTranslate />
       <nav>
         <ul>
           <li>
-            <Link to="/"> <p>{t("Home")}</p></Link>
-            <Link to="/Articles">{t("Articles")}</Link>
+            <Link to="/">{t("Inicio")}</Link>
+            <Link to="/Articles">{t("Artigos")}</Link>
           </li>
         </ul>
       </nav>

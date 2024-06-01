@@ -5,8 +5,8 @@ import { LanguageProvider } from "./shared/Utils/Context/LanguageContext/index.t
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-      <LanguageProvider>
+    <LanguageProvider>
         <App />
-      </LanguageProvider> 
+    </LanguageProvider>
   </React.StrictMode>,
 );
